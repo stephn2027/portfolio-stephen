@@ -1,15 +1,27 @@
 'use client';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionHeading from './SectionHeading';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function About() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+  useEffect(() => {
+    if (inView) {
+      setActiveSection('About');
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <motion.section
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40"
+      ref={ref}
+      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
+      id="about"
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
@@ -18,16 +30,13 @@ export default function About() {
         foundation in{' '}
         <span className="font-medium">Information Technology</span>, I earned my
         bachelor's degree as a testament to my commitment to understanding the
-        intricacies of the digital world. 
-        
-        My journey into the realm of coding
+        intricacies of the digital world. My journey into the realm of coding
         began as a personal exploration, and I quickly discovered my love for
         problem-solving and creating efficient, user-friendly applications.
         Through countless hours of self-directed learning and hands-on projects,
         I've honed my skills in languages such as Python, JavaScript, and
         HTML/CSS.
-        
-        <br/> My academic background has equipped me with a comprehensive
+        <br /> My academic background has equipped me with a comprehensive
         understanding of IT principles, providing me with a holistic perspective
         that complements my practical coding expertise. I am adept at
         translating complex concepts into simple, elegant solutions and thrive
