@@ -9,15 +9,11 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import {useInView} from 'react-intersection-observer';
 import { HiDownload } from 'react-icons/hi';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
-  const { ref, inView } = useInView();
-  const { setActiveSection } = useActiveSectionContext();
-  useEffect(() => {
-    if (inView) {
-      setActiveSection('Home');
-    }
-  }, [inView, setActiveSection]);
+  const {ref} = useSectionInView('Home',0.5);
+  
   return (
     <section ref={ref} id='home' className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
