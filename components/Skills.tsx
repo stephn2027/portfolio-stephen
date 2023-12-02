@@ -7,20 +7,18 @@ import React from 'react';
 import SectionHeading from './SectionHeading';
 
 const fadeInAnimationVariants = {
-    initial:{
-        y:100,
-        opacity:0,
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: (index: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.05 * index,
     },
-    animate:(index:number)=>({
-        y:0,
-        opacity:1,
-        transition:{
-            delay:0.05*index,
-        },
-    })
-
-    
-}
+  }),
+};
 
 export default function Skills() {
   const { ref } = useSectionInView('Skills');
@@ -37,11 +35,11 @@ export default function Skills() {
             className="bg-white border border-black/[0.1] rounded-xl px-5 py-3"
             key={index}
             variants={fadeInAnimationVariants}
-            initial='initial'
-            whileInView='animate'
+            initial="initial"
+            whileInView="animate"
             custom={index}
             viewport={{
-                once:true,
+              once: true,
             }}
           >
             {skill}
