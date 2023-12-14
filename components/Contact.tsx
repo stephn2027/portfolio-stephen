@@ -2,15 +2,18 @@
 
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import React from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
+import React, { useState } from 'react';
 import SectionHeading from './SectionHeading';
 import { sendEmail } from '@/actions/sendEmail';
+import SubmitBtn from './SubmitBtn';
+import toast from 'react-hot-toast'
+
+
+
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
-   
-  
+  const [inputValue,setInputValue] = useState({senderEmail:'',senderMessage:''}); 
 
   return (
     <motion.section
@@ -27,7 +30,7 @@ export default function Contact() {
         {' '}
         Please contact me directly at{' '}
         <a
-          className="underline"
+          className="underline text-cyan-800"
           href="mailto:stephn2027@gmail.com"
           target="_blank"
         >
@@ -35,11 +38,23 @@ export default function Contact() {
         </a>{' '}
         or through this form.
       </p>
-      <form
+      <form 
+      
         className="mt-10 flex flex-col"
+
         action={async (formData) => {
-          await sendEmail(formData);
-        }}
+          const {data,error} =  await sendEmail(formData);
+          
+          if(error){
+            toast.error(error);
+            return
+          }
+          toast.success("Email sent successfully!");
+          setInputValue(inputValue);
+        }
+      }
+      
+      
       >
         <input
           type="email"
@@ -48,6 +63,8 @@ export default function Contact() {
           required
           maxLength={500}
           className="h-14 px-4 rounded-lg borderBlack"
+          value={inputValue.senderEmail}
+          onChange={(e)=>setInputValue({...inputValue,senderEmail:e.target.value})}
         />
         <textarea
           placeholder="Enter your message"
@@ -55,14 +72,9 @@ export default function Contact() {
           className="h-52 rounded-lg borderBlack p-4 my-3"
           required
           maxLength={5000}
+          
         />
-        <button
-          type="submit"
-          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950"
-        >
-          Submit{' '}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </button>
+        <SubmitBtn />
       </form>
     </motion.section>
   );
