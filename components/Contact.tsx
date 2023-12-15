@@ -6,14 +6,14 @@ import React, { useState } from 'react';
 import SectionHeading from './SectionHeading';
 import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './SubmitBtn';
-import toast from 'react-hot-toast'
-
-
-
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
-  const [inputValue,setInputValue] = useState({senderEmail:'',senderMessage:''}); 
+  const [inputValue, setInputValue] = useState({
+    senderEmail: '',
+    senderMessage: '',
+  });
 
   return (
     <motion.section
@@ -38,23 +38,18 @@ export default function Contact() {
         </a>{' '}
         or through this form.
       </p>
-      <form 
-      
+      <form
         className="mt-10 flex flex-col"
-
         action={async (formData) => {
-          const {data,error} =  await sendEmail(formData);
-          
-          if(error){
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
             toast.error(error);
-            return
+            return;
           }
-          toast.success("Email sent successfully!");
-          setInputValue(inputValue);
-        }
-      }
-      
-      
+          toast.success('Email sent successfully!');
+          setInputValue({ senderMessage: '', senderEmail: '' });
+        }}
       >
         <input
           type="email"
@@ -64,7 +59,9 @@ export default function Contact() {
           maxLength={500}
           className="h-14 px-4 rounded-lg borderBlack"
           value={inputValue.senderEmail}
-          onChange={(e)=>setInputValue({...inputValue,senderEmail:e.target.value})}
+          onChange={(e) =>
+            setInputValue({ ...inputValue, senderEmail: e.target.value })
+          }
         />
         <textarea
           placeholder="Enter your message"
@@ -72,7 +69,10 @@ export default function Contact() {
           className="h-52 rounded-lg borderBlack p-4 my-3"
           required
           maxLength={5000}
-          
+          value={inputValue.senderMessage}
+          onChange={(e) =>
+            setInputValue({ ...inputValue, senderMessage: e.target.value })
+          }
         />
         <SubmitBtn />
       </form>
