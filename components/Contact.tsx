@@ -26,7 +26,7 @@ export default function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading> Contact Me</SectionHeading>
-      <p className="text-gray-700 -mt-6 ">
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
         {' '}
         Please contact me directly at{' '}
         <a
@@ -57,7 +57,7 @@ export default function Contact() {
           placeholder="Enter your email"
           required
           maxLength={500}
-          className="h-14 px-4 rounded-lg borderBlack"
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           value={inputValue.senderEmail}
           onChange={(e) =>
             setInputValue({ ...inputValue, senderEmail: e.target.value })
@@ -66,7 +66,8 @@ export default function Contact() {
         <textarea
           placeholder="Enter your message"
           name="senderMessage"
-          className="h-52 rounded-lg borderBlack p-4 my-3"
+          className="h-52 rounded-lg borderBlack p-4 my-3
+          dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           required
           maxLength={5000}
           value={inputValue.senderMessage}
