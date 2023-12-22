@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
-
+import profImage from '../public/cvpic2-PhotoRoom.jpg'
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
@@ -29,13 +29,13 @@ export default function Intro() {
             transition={{ type: 'tween', duration: 0.5 }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+              src={profImage} 
               alt="prof pic"
               width="192"
               height="192"
               quality="95"
               priority={true}
-              className="w-24 h-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="w-34 h-34 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -50,19 +50,19 @@ export default function Intro() {
               duration: 0.7,
             }}
           >
-            👋
+            {/* 👋 */}
           </motion.span>
         </div>
       </div>
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl pb-3"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{' '}
-        <span className="font-bold">full-stack developer</span> with{' '}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{' '}
+        <span className="font-bold">Hi There, I'm Stephen.</span> A{' '}
+        <span className="font-bold">self-taught front-end developer</span> who finds joy in constructing {' '}
+        <span className="italic">websites and applications.</span> My expertise centers around {" "}
+        <span className="italic">Javascript,</span>{' '}particularly in {' '}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
       <motion.div

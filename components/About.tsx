@@ -17,9 +17,8 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        I'm a self-taught frontend developer with a passion for transforming
-        ideas into innovative and functional solutions. Armed with a solid
+      <p className="mb-3 sm:text-xl sm:!leading-8">
+        I'm a self-taught frontend developer with a solid
         foundation in{' '}
         <span className="font-medium">Information Technology</span>, I earned my
         bachelor's degree as a testament to my commitment to understanding the
@@ -27,23 +26,20 @@ export default function About() {
         began as a personal exploration, and I quickly discovered my love for
         problem-solving and creating efficient, user-friendly applications.
         Through countless hours of self-directed learning and hands-on projects,
-        I've honed my skills in languages such as Python, JavaScript, and
+        I've honed my skills in React, JavaScript, and
         HTML/CSS.
-        <br /> My academic background has equipped me with a comprehensive
-        understanding of IT principles, providing me with a holistic perspective
-        that complements my practical coding expertise. I am adept at
-        translating complex concepts into simple, elegant solutions and thrive
+
+        <br /> I am adept at translating complex concepts into simple, elegant solutions and thrive
         in collaborative environments where I can contribute my unique blend of
         self-taught knowledge and formal education.
       </p>
 
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{' '}
+      <p className='sm:text-xl sm:!leading-8'>
+        <span className="italic">Outside coding,</span> I stay active by working out and playing sports, watching movies, 
+        and reading. I also enjoy{' '}
         <span className="font-medium">learning new things</span>. I am currently
         learning about{' '}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        <span className="font-medium">Japanese language and Finance</span>.
       </p>
     </motion.section>
   );
