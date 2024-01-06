@@ -1,10 +1,9 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+
+import myPond from "@/public/myPond.png";
+import tokyoDevs from "@/public/vite.png";
+import littleSips from "@/public/littleSips.png";
+import gameShop from '@/public/gameShop.png';
 
 export const links = [
   {
@@ -34,25 +33,34 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "MyPond",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked as a part-time developer on this project for 5 weeks. Students can reserve mentors and choose schools for college.",
+    tags: ["Vue 3", "Next.js", "Tailwind CSS", "Figma","Nuxt.js","TypeScript"],
+    imageUrl: myPond,
+    
   },
   {
-    title: "rmtDev",
+    title: "Team Devs",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Developed a collab web app with fellow front-end developers. Utilized Git for version control, hosted the repository on GitHub, and employed branches for independent work on various features or bug fixes.",
+    tags: ["Vite", "TypeScript", "React", "Tailwind CSS", "PostgresSQL", "Docker","Express","Vercel"],
+    imageUrl: tokyoDevs,
+    
   },
   {
-    title: "Word Analytics",
+    title: "LittleSips",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Created a website using React.js for a client's cafe located in New Jersey,US to hone my skills doing real world projects after 4 months of learning React.js.",
+    tags: ["React", "GSAP", "HTML", "CSS"],
+    imageUrl: littleSips,
+  },
+  {
+    title: "GameShop",
+    description:
+      "Developed a web application using Next.js and Snipcart API to handle item addition and user payment method. After 2 months of learning Next.js",
+    tags: ["React", "Next.js", "GraphCMS", "GSAP","MUI","Bootstrap","Apollo client"],
+    imageUrl: gameShop,
   },
 ] as const;
 
