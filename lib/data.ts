@@ -1,9 +1,9 @@
 import React from "react";
 
-import myPond from "@/public/myPond.png";
+import myPond from "@/public/mypond.png";
 import tokyoDevs from "@/public/vite.png";
-import littleSips from "@/public/littleSips.png";
-import gameShop from '@/public/gameShop.png';
+import littleSips from "@/public/littlesips.png";
+import gameShop from '@/public/gameshop.png';
 
 export const links = [
   {
