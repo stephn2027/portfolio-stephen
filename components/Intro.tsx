@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
-import profImage from '../public/cvpic2-PhotoRoom.jpg'
+import profImage from '../public/profilepic2close-PhotoRoom.jpg'
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
@@ -50,7 +50,7 @@ export default function Intro() {
               duration: 0.7,
             }}
           >
-            {/* 👋 */}
+            
           </motion.span>
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function Intro() {
         </Link>
         <a
           className="group bg-white px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href="/StephenUyCV2024.pdf"
           download
         >
           Download CV{' '}

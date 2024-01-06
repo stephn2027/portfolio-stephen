@@ -3,6 +3,7 @@
 import { projectsData } from '@/lib/data';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useRef } from 'react';
 
 type ProjectProps = (typeof projectsData)[number];
@@ -12,6 +13,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  link,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -44,12 +46,15 @@ export default function Project({
             ))}
           </ul>
         </div>
+        <Link href={link} target='_blank'>
         <Image
           src={imageUrl}
           alt={title}
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 group-even:right-[initial] group-even:-left-40"
         />
+        </Link>
+        
       </section>
     </motion.div>
   );
