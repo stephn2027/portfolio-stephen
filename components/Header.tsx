@@ -32,7 +32,9 @@ export default function Header() {
                   { 'text-gray-900 dark:text-gray-300': activeSection === link.name, }
                 )}
                 href={link.hash}
-                onClick={() => {setActiveSection(link.name),setTimeOfLastClick(Date.now())}}
+                onClick={() => {setActiveSection(link.name);
+                setTimeOfLastClick(Date.now());
+              }}
               >
                 {link.name}
                 {link.name === activeSection && (
