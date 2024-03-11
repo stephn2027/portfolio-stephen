@@ -4,7 +4,7 @@ import myPond from "@/public/mypond.png";
 import tokyoDevs from "@/public/vite.png";
 import littleSips from "@/public/littlesips.png";
 import gameShop from '@/public/gameshop.png';
-
+import deoP from '@/public/deoP.png';
 export const links = [
   {
     name: "Home",
@@ -39,6 +39,15 @@ export const projectsData = [
     tags: ["Vue 3", "Next.js", "Tailwind CSS", "Figma","Nuxt.js","TypeScript"],
     imageUrl: myPond,
     link: 'https://diveintothepond.com/',
+    
+  },
+  {
+    title: "Deo Photography",
+    description:
+      "Built a responsive photography portfolio website featuring dynamic content and immersive animations to showcase the photographer's work. Seamlessly adapts to different screen sizes for consistent viewing across devices.",
+    tags: ["React", "GSAP", "Tailwind CSS", "Pixelmator Pro","Framer motion"],
+    imageUrl: deoP,
+    link: 'https://deo-photography.vercel.app/',
     
   },
   {
