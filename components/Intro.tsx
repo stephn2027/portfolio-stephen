@@ -84,7 +84,7 @@ export default function Intro() {
         </Link>
         <a
           className="group bg-white px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/StephenUy2024.pdf"
+          href="/public/StephenUy2024.pdf"
           download
         >
           Download CV{' '}
