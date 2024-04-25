@@ -44,17 +44,17 @@ export const projectsData = [
   {
     title: "Deo Photography",
     description:
-      "Built a responsive photography portfolio website featuring dynamic content and immersive animations to showcase the photographer's work. Seamlessly adapts to different screen sizes for consistent viewing across devices.",
-    tags: ["React", "GSAP", "Tailwind CSS", "Pixelmator Pro","Framer motion"],
+      "Created a responsive photography portfolio using React, Tailwind CSS, GSAP, and Framer Motion. Integrated Express.js API for dynamic content and Cloudinary calls via Axios. Hosted on Fly.io for optimized performance.",
+    tags: ["React", "GSAP", "Tailwind CSS","Framer motion","Express.js","Axios","Cloudinary","Fly.io"],
     imageUrl: deoP,
-    link: 'https://deo-photography.vercel.app/',
+    link: 'https://deopalculanphotography.com/',
     
   },
   {
     title: "Team Devs",
     description:
       "Developed a collab web app with fellow front-end developers. Utilized Git for version control, hosted the repository on GitHub, and employed branches for independent work on various features or bug fixes.",
-    tags: ["Vite", "TypeScript", "React", "Tailwind CSS", "Postgres SQL", "Docker","Express","Vercel"],
+    tags: ["Vite", "TypeScript", "React", "Tailwind CSS", "Postgres SQL", "Docker","Express.js","Vercel"],
     imageUrl: tokyoDevs,
     link: 'https://vite-starter-gold.vercel.app/',
     
@@ -85,16 +85,17 @@ export const skillsData = [
   "React",
   "Next.js",
   "Node.js",
+  "Express.js",
   "Git",
   "Tailwind",
   "ES6",
   "MongoDB",
-  "Photoshop",
   "GraphQL",
   "Apollo",
   "Vite",
+  "Axios",
   "PostgreSQL",
-  "Vue",
+  "Vue3",
   "GSAP",
   "Framer Motion",
 ] as const;
