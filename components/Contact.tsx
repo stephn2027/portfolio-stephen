@@ -57,7 +57,7 @@ export default function Contact() {
           placeholder="Enter your email"
           required
           maxLength={500}
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg borderBlack dark:text-gray-900 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           value={inputValue.senderEmail}
           onChange={(e) =>
             setInputValue({ ...inputValue, senderEmail: e.target.value })
@@ -67,7 +67,7 @@ export default function Contact() {
           placeholder="Enter your message"
           name="senderMessage"
           className="h-52 rounded-lg borderBlack p-4 my-3
-          dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          dark:bg-white dark:bg-opacity-80 dark:text-gray-800 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           required
           maxLength={5000}
           value={inputValue.senderMessage}
